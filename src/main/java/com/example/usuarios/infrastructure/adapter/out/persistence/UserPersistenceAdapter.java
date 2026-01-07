@@ -29,6 +29,11 @@ public class UserPersistenceAdapter implements UserRepositoryPort {
     }
 
     @Override
+    public Optional<User> findByCorreo(String correo) {
+        return jpa.findByCorreoWithRol(correo).map(mapper::toDomain);
+    }
+
+    @Override
     public boolean existsByCorreo(String correo) {
         return jpa.existsByCorreo(correo);
     }
