@@ -17,7 +17,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/usuarios")
 @Tag(name = "Usuarios", description = "Operaciones relacionadas con usuarios del sistema")
 public class UserController {
 
@@ -53,7 +53,7 @@ public class UserController {
             description = "Rol no encontrado (si aplica)"
     )
     @PreAuthorize("hasRole('ADMINISTRADOR')")
-    @PostMapping
+    @PostMapping("/propietario")
     @ResponseStatus(HttpStatus.CREATED)
     public UserResponse create(@RequestBody @Valid CreateUserRequest req) {
         User u = new User();
