@@ -7,6 +7,7 @@ import static org.mockito.Mockito.*;
 import java.time.LocalDate;
 import java.util.Optional;
 
+import com.example.usuarios.domain.usecase.CreateUserService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

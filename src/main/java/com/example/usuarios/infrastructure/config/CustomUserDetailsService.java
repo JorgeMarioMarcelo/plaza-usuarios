@@ -1,7 +1,7 @@
 package com.example.usuarios.infrastructure.config;
 
 import com.example.usuarios.domain.model.User;
-import com.example.usuarios.domain.port.out.UserRepositoryPort;
+import com.example.usuarios.domain.spi.UserRepositoryPort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.*;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

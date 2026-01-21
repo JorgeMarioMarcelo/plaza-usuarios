@@ -1,7 +1,7 @@
 package com.example.usuarios.infrastructure.adapter.out.persistence;
 
 import com.example.usuarios.domain.model.User;
-import com.example.usuarios.domain.port.out.UserRepositoryPort;
+import com.example.usuarios.domain.spi.UserRepositoryPort;
 import com.example.usuarios.infrastructure.adapter.out.persistence.mapper.UserMapper;
 import com.example.usuarios.infrastructure.adapter.out.persistence.repository.JpaUserRepository;
 import org.springframework.stereotype.Component;

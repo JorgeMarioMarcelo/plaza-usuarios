@@ -1,7 +1,7 @@
 package com.example.usuarios.infrastructure.adapter.out.persistence;
 
 import com.example.usuarios.domain.model.Role;
-import com.example.usuarios.domain.port.out.RoleRepositoryPort;
+import com.example.usuarios.domain.spi.RoleRepositoryPort;
 import com.example.usuarios.infrastructure.adapter.out.persistence.mapper.RoleMapper;
 import com.example.usuarios.infrastructure.adapter.out.persistence.repository.JpaRoleRepository;
 import org.springframework.stereotype.Component;

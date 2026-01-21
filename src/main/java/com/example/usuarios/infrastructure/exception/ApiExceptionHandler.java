@@ -4,6 +4,7 @@ import com.example.usuarios.domain.exception.BusinessException;
 import com.example.usuarios.domain.exception.ForbiddenException;
 import com.example.usuarios.domain.exception.NotFoundException;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 
 @RestControllerAdvice
@@ -25,6 +26,20 @@ public class ApiExceptionHandler {
     @ResponseStatus(HttpStatus.FORBIDDEN)
     public ErrorResponse forbidden(ForbiddenException ex) {
         return new ErrorResponse("FORBIDDEN", ex.getMessage());
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ErrorResponse handleValidationErrors(MethodArgumentNotValidException ex) {
+
+        String message = ex.getBindingResult()
+                .getFieldErrors()
+                .stream()
+                .findFirst()
+                .map(error -> error.getDefaultMessage())
+                .orElse("Error de validación");
+
+        return new ErrorResponse("VALIDATION_ERROR", message);
     }
 }
 

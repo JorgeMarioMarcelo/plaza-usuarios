@@ -1,4 +1,4 @@
-package com.example.usuarios.domain.port.in;
+package com.example.usuarios.domain.api;
 
 public interface ValidateRoleUseCase {
     boolean userHasRole(Long userId, String roleName);

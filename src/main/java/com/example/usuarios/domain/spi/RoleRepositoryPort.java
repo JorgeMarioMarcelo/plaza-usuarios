@@ -1,4 +1,4 @@
-package com.example.usuarios.domain.port.out;
+package com.example.usuarios.domain.spi;
 
 import com.example.usuarios.domain.model.Role;
 

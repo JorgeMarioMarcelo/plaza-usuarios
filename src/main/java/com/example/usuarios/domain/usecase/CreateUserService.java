@@ -1,12 +1,12 @@
-package com.example.usuarios.application.service;
+package com.example.usuarios.domain.usecase;
 
 import com.example.usuarios.domain.exception.BusinessException;
 import com.example.usuarios.domain.exception.NotFoundException;
 import com.example.usuarios.domain.model.Role;
 import com.example.usuarios.domain.model.User;
-import com.example.usuarios.domain.port.in.CreateUserUseCase;
-import com.example.usuarios.domain.port.out.RoleRepositoryPort;
-import com.example.usuarios.domain.port.out.UserRepositoryPort;
+import com.example.usuarios.domain.api.CreateUserUseCase;
+import com.example.usuarios.domain.spi.RoleRepositoryPort;
+import com.example.usuarios.domain.spi.UserRepositoryPort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

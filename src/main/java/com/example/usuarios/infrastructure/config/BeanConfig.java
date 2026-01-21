@@ -1,10 +1,10 @@
 package com.example.usuarios.infrastructure.config;
 
-import com.example.usuarios.application.service.GetUserService;
-import com.example.usuarios.application.service.ValidateRoleService;
-import com.example.usuarios.domain.port.in.GetUserUseCase;
-import com.example.usuarios.domain.port.in.ValidateRoleUseCase;
-import com.example.usuarios.domain.port.out.UserRepositoryPort;
+import com.example.usuarios.domain.usecase.GetUserService;
+import com.example.usuarios.domain.usecase.ValidateRoleService;
+import com.example.usuarios.domain.api.GetUserUseCase;
+import com.example.usuarios.domain.api.ValidateRoleUseCase;
+import com.example.usuarios.domain.spi.UserRepositoryPort;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

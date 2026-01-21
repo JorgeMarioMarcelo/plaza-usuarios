@@ -1,9 +1,9 @@
-package com.example.usuarios.application.service;
+package com.example.usuarios.domain.usecase;
 
 import com.example.usuarios.domain.exception.NotFoundException;
 import com.example.usuarios.domain.model.User;
-import com.example.usuarios.domain.port.in.GetUserUseCase;
-import com.example.usuarios.domain.port.out.UserRepositoryPort;
+import com.example.usuarios.domain.api.GetUserUseCase;
+import com.example.usuarios.domain.spi.UserRepositoryPort;
 
 public class GetUserService implements GetUserUseCase {
     private final UserRepositoryPort userRepo;

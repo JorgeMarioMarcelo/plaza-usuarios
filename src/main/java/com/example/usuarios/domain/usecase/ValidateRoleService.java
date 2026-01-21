@@ -1,7 +1,7 @@
-package com.example.usuarios.application.service;
+package com.example.usuarios.domain.usecase;
 
-import com.example.usuarios.domain.port.in.ValidateRoleUseCase;
-import com.example.usuarios.domain.port.out.UserRepositoryPort;
+import com.example.usuarios.domain.api.ValidateRoleUseCase;
+import com.example.usuarios.domain.spi.UserRepositoryPort;
 
 public class ValidateRoleService implements ValidateRoleUseCase {
     private final UserRepositoryPort userRepo;

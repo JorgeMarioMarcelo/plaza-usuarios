@@ -3,9 +3,9 @@ package com.example.usuarios.infrastructure.adapter.in.web;
 import com.example.usuarios.application.dto.request.CreateUserRequest;
 import com.example.usuarios.application.dto.response.UserResponse;
 import com.example.usuarios.domain.model.User;
-import com.example.usuarios.domain.port.in.CreateUserUseCase;
-import com.example.usuarios.domain.port.in.GetUserUseCase;
-import com.example.usuarios.domain.port.in.ValidateRoleUseCase;
+import com.example.usuarios.domain.api.CreateUserUseCase;
+import com.example.usuarios.domain.api.GetUserUseCase;
+import com.example.usuarios.domain.api.ValidateRoleUseCase;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -17,7 +17,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/usuarios")
+@RequestMapping("/api/v1/usuarios")
 @Tag(name = "Usuarios", description = "Operaciones relacionadas con usuarios del sistema")
 public class UserController {
 
